@@ -145,7 +145,7 @@ function category() {
               modalDishImg.setAttribute("src", dishNameData["0"].strMealThumb);
               for (let i = 1; i <= 20; i++) {
                 let ingredientNumber = "strIngredient" + i;
-                if (dishNameData["0"][ingredientNumber] != "") {
+                if (dishNameData["0"][ingredientNumber].trim() != "") {
                   let ingredientDiv = document.createElement("div");
                   ingredientDiv.setAttribute("id", "ingredient");
                   ingredientDiv.addEventListener("click", () => {
