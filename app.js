@@ -175,7 +175,7 @@ function category() {
       });
     })
     .catch((er) => {
-      alert(er);
+      alert("Either this Category isn't avialable or you need to improve your grammar skills!");
       searchBtn.addEventListener("click", () => {});
     });
 }
