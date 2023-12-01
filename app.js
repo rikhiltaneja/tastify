@@ -117,7 +117,7 @@ function category() {
       categoryMealsData.forEach((el) => {
         let categoryMealDiv = document.createElement("div");
         categoryMealDiv.setAttribute("id", "category-meal");
-        categoryMealDiv.setAttribute("class", el.strMeal);
+        // categoryMealDiv.setAttribute("class", el.strMeal);
         let categoryMealImg = document.createElement("img");
         categoryMealImg.setAttribute("src", el.strMealThumb);
         let categoryDishName = document.createElement("div");
@@ -200,3 +200,8 @@ let randomDiv = document.querySelector("#random");
 downArrow.addEventListener("click", () => {
   downArrow.scrollIntoView({ behavior: "smooth" });
 });
+let exploreBtn = document.querySelector(".explore")
+
+exploreBtn.addEventListener("click",()=>{
+  downArrow.scrollIntoView({ behavior: "smooth" })
+})

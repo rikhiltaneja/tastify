@@ -12,9 +12,7 @@
   box-sizing: border-box;
   color: white;
 }
-body {
-  overflow-x: hidden;
-}
+
 #parent {
   height: 100%;
   width: 100%;
@@ -27,6 +25,11 @@ body {
   background-position: fixed;
 }
 #about-full {
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   width: 100vw;
 }
@@ -68,7 +71,7 @@ body {
   position: fixed;
   height: 7vh;
   width: 100vw;
-  background: rgba(255, 255, 255, 0.105);
+  background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-bottom-left-radius: 10px;
@@ -442,7 +445,7 @@ body {
 #category {
   display: flex;
   justify-content: center;
-  /* width: 100vw; */
+  /* width: 90vw; */
   flex-wrap: wrap;
   /* overflow-x: scroll; */
   gap: 1vmax;
@@ -495,8 +498,58 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  #dish-details{
+  #dish-details {
     height: 50vh;
     width: 65vw;
   }
+  #category {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    width: 80vw;
+    justify-content: flex-start;
+  }
+  #category::-webkit-scrollbar {
+    display: none;
+  }
+  #options{
+    opacity: 1;
+  }
+  #navbar{
+  background: rgba(255, 255, 255, 0.18);
+  }
+}
+#about-section {
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7vmin;
+  /* width: 70vmax; */
+  /* height: 60vmin; */
+  background: rgba(255, 255, 255, 0.25);
+  /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  /* overflow-y: scroll; */
+}
+#about-section-heading{
+  font-size: 4vmax;
+  font-family: kbsketch;
+}
+#about-section-text{
+  display: flex;
+  flex-direction: column;
+  gap: 3vmin;
+  font-family: kbnormal;
+  font-size: 1vmax;
+  line-height: 3vmin;
+}
+#myName{
+  align-self: flex-end;
+  color: yellow;
+  font-family: kbsketch;
+  font-size: 0.8vmax;
+  letter-spacing: 0.2vmin;
 }
