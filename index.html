@@ -1,14 +1,23 @@
+<!-- html code for the home page -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Tastify</title>
+
+    <!-- linking style.css to the document for styles -->
     <link rel="stylesheet" href="style.css" />
   </head>
+
+  <!-- starting body code of the main page -->
   <body>
+
+    <!-- navbar div, for the navbar of the page -->
     <div id="navbar">
-      <div id="options">
+
+        <!-- options div, for the options of the navbar -->
+        <div id="options">
         <div class="option home" style="-webkit-text-stroke: 0.1vmax #d14d01">
           Home
         </div>
@@ -16,6 +25,8 @@
         <div class="option about">About Us</div>
       </div>
     </div>
+
+    <!-- background elements of page for effects -->
     <div class="bg-elements" style="top: 10vh; left: 10vw">
       <svg
         fill="#ffffff"
@@ -415,12 +426,20 @@
         </g>
       </svg>
     </div>
+
+    <!-- parent div for the whole page -->
     <div id="parent">
-      <div id="main">
+
+    <!-- main div for the main part of the page -->
+    <div id="main">
+
+        <!-- head div for the heading part of the page -->
         <div id="head">
           <div id="name">Tastify</div>
           <div id="tagline">Your Palate's Passport to Pleasure!</div>
         </div>
+
+        <!-- search div for the search part of the page -->
         <div id="search">
           <svg
             width="6.5vw"
@@ -445,6 +464,8 @@
               ></path>
             </g></svg
           >
+
+          <!-- input for the search input -->
           <input
             type="text"
             id="searchbar"
@@ -452,9 +473,13 @@
             placeholder="Search your Favourite Meal Category! 😋"
           />
           <div id="search-btn">
+
+            <!-- button to click on to proceed search -->
             <button>Let's get Cooking!</button>
           </div>
         </div>
+
+        <!-- message div for a welcome message -->
         <div id="message">
           <div id="m1">
             Welcome to the home of all World-Class Recipes! Search the name of
@@ -464,6 +489,8 @@
           </div>
           <div id="m2">Enjoy Cooking!!</div>
         </div>
+
+        <!-- down-arrow div to guide the users down -->
         <div id="down-arrow">
           <svg
             width="6vw"
@@ -490,18 +517,24 @@
             </g>
           </svg>
         </div>
+
+        <!-- random div for the random meals generated -->
         <div id="random">
           <div id="head-text">
             <div id="small">Make Yourself an Amazing Meal</div>
             <div id="big">Here is an Amazing Meal Recipe for you!</div>
           </div>
           <div id="random-meal" class="recipe-show">
-            <div id="loading">
+      
+      <!-- loading div to create a loading effect over the random-meal div -->
+      <div id="loading">
               <img src="./assets/pizza2-unscreen.gif" alt="" />
             </div>
             <img src="" alt="" id="mealImg" />
             <div id="randomDishName"></div>
           </div>
+
+          <!-- button to generate a new random meal -->
           <div id="random-btn">
             <button>Get another meal</button>
           </div>
@@ -514,15 +547,23 @@
               <div id="categoryDishName"></div>
             </div> -->
           </div>
+
+          <!-- button for searching again -->
           <div id="search-again-btn">
             <button>Search Again</button>
           </div>
         </div>
       </div>
+
+      <!-- modal div, for the modal which will appear, having the contents of the meal selected -->
       <div id="modal">
+
+        <!-- close button div to close the modal -->
         <div id="close-btn">
           <button>Close</button>
         </div>
+
+        <!-- content of the modal, having dish image, name, content, ingredients, steps, etc. -->
         <div id="modal-dish">
           <img src="" alt="" />
           <div id="dish-details">
@@ -543,8 +584,11 @@
           </div>
         </div>
       </div>
+
+      <!-- loading div to create a loading effect over the modal div -->
       <div id="loading-full"><img src="./assets/pizza2-unscreen.gif" alt=""></div>
     </div>
+    <!-- linking app.js to the file for JavaScript -->
     <script src="app.js"></script>
   </body>
 </html>
