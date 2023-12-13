@@ -42,14 +42,16 @@ function getRandomDish() {
   randomDishName.style.visibility = "hidden";
 
   //fetching random meal API from themealdb.com
-  fetch("https://www.themealdb.com/api/json/v1/1/random.php")
-    .then((res) => {
-      return res.json();
-    })
+  // fetch("https://www.themealdb.com/api/json/v1/1/random.php")
+  axios.get("https://www.themealdb.com/api/json/v1/1/random.php")
+    // .then((res) => {
+    //   return res.json();
+    // })
     .then((data) => {
       ingredientsDisplay.innerHTML = "";
       let randomDishData;
-      randomDishData = data;
+      randomDishData = data.data;
+      console.log(randomDishData)
       let newRandomDishData = randomDishData.meals["0"];
       console.log(randomDishData);
       setTimeout(() => {
@@ -110,7 +112,10 @@ function getRandomDish() {
           }
         }
       });
-    });
+    })
+    .catch((e)=>{
+      console.log(e)
+    })
 }
 
 //calling the function, so that on load a dish is loaded
