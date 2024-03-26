@@ -34,4 +34,4 @@ Tastify fetches recipe data from [The Meal DB API](https://www.themealdb.com/).
 
 
 Enjoy exploring and creating delicious meals with Tastify!
-=
+
